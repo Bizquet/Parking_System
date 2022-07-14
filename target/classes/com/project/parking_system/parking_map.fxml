@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="parkingMapPane" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parking_system.controllers.teller.ParkingController">
+   <children>
+      <Button fx:id="btn1" layoutX="224.0" layoutY="258.0" mnemonicParsing="false" onAction="#showParkingDialog"
+              text="Button 1" />
+      <Button fx:id="btn2" layoutX="487.0" layoutY="258.0" mnemonicParsing="false" onAction="#showParkingDialog"
+              text="Button 2" />
+   </children>
+</AnchorPane>

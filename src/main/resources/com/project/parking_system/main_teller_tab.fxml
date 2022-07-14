@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="540.0" prefWidth="960.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parking_system.controllers.teller.MainTellerController">
+   <left>
+      <Pane prefHeight="540.0" prefWidth="160.0" style="-fx-background-color: #457B9D;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="65.0" prefHeight="220.0" prefWidth="160.0" spacing="8.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#toParkingMap" prefHeight="25.0" prefWidth="170.0" text="Parking Map">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#toClientList" prefHeight="25.0" prefWidth="170.0" text="Client List" />
+                  <Button mnemonicParsing="false" onAction="#toGenerateQR" prefHeight="25.0" prefWidth="199.0" text="Generate QR" />
+                  <Button mnemonicParsing="false" onAction="#toScanQR" prefHeight="25.0" prefWidth="206.0" text="Scan QR" />
+               </children>
+               <padding>
+                  <Insets top="12.0" />
+               </padding>
+            </VBox>
+            <Label layoutX="42.0" layoutY="33.0" text="Parking System" />
+            <Button layoutX="53.0" layoutY="454.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
