@@ -51,7 +51,7 @@ public class AuthenticationRepository {
     }
 
     public ResponseDTO RegisterEmployee(EmployeeRegistrationDTO registrationDTO, String token){
-        url = url+"api/admin/register";
+        url = url+"/api/admin/register";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
@@ -74,9 +74,6 @@ public class AuthenticationRepository {
             if(responseEntity.getStatusCode() == HttpStatus.OK){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
                 return responseDTO;
-            }else if(responseEntity.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
-                ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),false);
-                return responseDTO;
             }else{
                 ResponseDTO responseDTO = new ResponseDTO("Registration failed for unknown cause",false);
                 return responseDTO;
@@ -84,7 +81,12 @@ public class AuthenticationRepository {
         }catch(HttpClientErrorException ex){
             if(ex.getStatusCode()==HttpStatus.FORBIDDEN){
                 return new ResponseDTO("Failed Authentication",false);
-            }else{
+            }
+            else if(ex.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+                ResponseDTO responseDTO = new ResponseDTO(ex.getMessage(),false);
+                return responseDTO;
+            }
+             else{
                 return new ResponseDTO(ex.getStatusCode().toString(),false);
             }
         }catch (HttpServerErrorException ex){

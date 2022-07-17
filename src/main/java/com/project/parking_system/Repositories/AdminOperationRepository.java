@@ -54,7 +54,7 @@ public class AdminOperationRepository {
     }
 
     public ResponseDTO DeleteEmployee(EmployeeDTO employeeDTO,String token){
-        url = url+"api/admin/DeleteEmployee";
+        url = url+"/api/admin/DeleteEmployee";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
@@ -78,7 +78,7 @@ public class AdminOperationRepository {
             if(responseEntity.getStatusCode() == HttpStatus.OK){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
                 return responseDTO;
-            }else if(responseEntity.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+            }else if(responseEntity.getStatusCode() == HttpStatus.BAD_REQUEST){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),false);
                 return responseDTO;
             }else{
@@ -97,7 +97,7 @@ public class AdminOperationRepository {
     }
 
     public ResponseDTO ChangeEmployeePassword(EmployeeRegistrationDTO employeeDTO, String token){
-        url = url+"api/admin/ChangePassword";
+        url = url+"/api/admin/ChangePassword";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
@@ -122,7 +122,7 @@ public class AdminOperationRepository {
             if(responseEntity.getStatusCode() == HttpStatus.OK){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
                 return responseDTO;
-            }else if(responseEntity.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+            }else if(responseEntity.getStatusCode() == HttpStatus.BAD_REQUEST){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),false);
                 return responseDTO;
             }else{
