@@ -54,7 +54,7 @@ public class AdminOperationRepository {
     }
 
     public ResponseDTO DeleteEmployee(EmployeeDTO employeeDTO,String token){
-        url = url+"api/admin/DeleteEmployee";
+        url = url+"/api/admin/DeleteEmployee";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
@@ -97,7 +97,7 @@ public class AdminOperationRepository {
     }
 
     public ResponseDTO ChangeEmployeePassword(EmployeeRegistrationDTO employeeDTO, String token){
-        url = url+"api/admin/ChangePassword";
+        url = url+"/api/admin/ChangePassword";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();

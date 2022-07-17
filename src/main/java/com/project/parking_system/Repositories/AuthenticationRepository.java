@@ -51,7 +51,7 @@ public class AuthenticationRepository {
     }
 
     public ResponseDTO RegisterEmployee(EmployeeRegistrationDTO registrationDTO, String token){
-        url = url+"api/admin/register";
+        url = url+"/api/admin/register";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
