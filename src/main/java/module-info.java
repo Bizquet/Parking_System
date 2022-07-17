@@ -1,7 +1,9 @@
 module com.project.parking_system {
     requires javafx.controls;
     requires javafx.fxml;
-
+    requires com.fasterxml.jackson.core;
+    requires com.google.zxing;
+    requires webcam.capture;
 
     opens com.project.parking_system to javafx.fxml;
 //    opens com.project.parking_system.teller_tabs to javafx.fxml;
