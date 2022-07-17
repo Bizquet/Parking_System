@@ -2,6 +2,7 @@ package com.project.parking_system.Repositories;
 
 import com.google.gson.Gson;
 import com.project.parking_system.datamodel.ResponseDTO;
+import com.project.parking_system.datamodel.SignOutDTO;
 import com.project.parking_system.datamodel.UserDTO;
 import com.project.parking_system.datamodel.UserDTOWithTimestampList;
 import org.springframework.http.*;
@@ -162,6 +163,52 @@ public class TellerOperationsRepository {
             if(ex.getStatusCode()==HttpStatus.FORBIDDEN){
                 return new ResponseDTO("Failed Authentication",false);
             }else{
+                return new ResponseDTO(ex.getStatusCode().toString(),false);
+            }
+        }catch (HttpServerErrorException ex){
+            return new ResponseDTO("Server Error",false);
+        }
+    }
+
+    public ResponseDTO SignoutUser(SignOutDTO signOutDTO, String token){
+        url = url+"api/teller/signout";
+
+        //Set Normal headers
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+        //Add Authentication here
+        httpHeaders.set("Authorization",token);
+
+        //Set Request Body
+        Gson gson = new Gson();
+        String json = gson.toJson(signOutDTO);
+
+        //Compact it into entity
+        HttpEntity<String> entity = new HttpEntity<>(json,httpHeaders);
+
+        //Post request
+        try{
+            ResponseEntity<String> responseEntity = restTemplate.postForEntity(url,entity,String.class);
+
+            if(responseEntity.getStatusCode() == HttpStatus.OK){
+                ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
+                return responseDTO;
+            }else{
+                ResponseDTO responseDTO = new ResponseDTO("Signout failed for unknown cause",false);
+                return responseDTO;
+            }
+        }catch(HttpClientErrorException ex){
+            if(ex.getStatusCode()==HttpStatus.FORBIDDEN){
+                return new ResponseDTO("Failed Authentication",false);
+            }else if(ex.getStatusCode() == HttpStatus.BAD_REQUEST){
+                return new ResponseDTO("Incorrect User Credentials",false);
+            }else if(ex.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+                return new ResponseDTO("Already Signed out",false);
+            }
+            else{
                 return new ResponseDTO(ex.getStatusCode().toString(),false);
             }
         }catch (HttpServerErrorException ex){
