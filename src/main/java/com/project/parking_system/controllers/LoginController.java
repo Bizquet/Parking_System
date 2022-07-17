@@ -2,6 +2,8 @@ package com.project.parking_system.controllers;
 
 import com.project.parking_system.Main;
 import com.project.parking_system.Repositories.AuthenticationRepository;
+import com.project.parking_system.controllers.admin.MainAdminController;
+import com.project.parking_system.controllers.teller.MainTellerController;
 import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,10 +41,10 @@ public class LoginController {
         }else {
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
-                    switchToAdmin();
+                    switchToAdmin(currentLogin);
                     break;
                 case "TELLER_USER":
-                    switchToTeller();
+                    switchToTeller(currentLogin);
                     break;
             }
         }
@@ -52,11 +54,12 @@ public class LoginController {
     /**
      * Switches to the teller part of the app (might need to pass in account object or just api calls to store stuff)
      */
-    private void switchToTeller() throws IOException {
+    private void switchToTeller(LoginDTO currentLogin) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.TELLER_TAB.getFilename()));
         Parent root = loader.load();
 
-        // load controller and init data if needed
+        MainTellerController controller = loader.getController();
+        controller.initData(currentLogin);
 
         Stage stage = (Stage) loginPane.getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -66,11 +69,12 @@ public class LoginController {
     /**
      * Switches to the admin part of the app (might need to pass in account object or just api calls to store stuff)
      */
-    private void switchToAdmin() throws IOException {
+    private void switchToAdmin(LoginDTO currentLogin) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.ADMIN_TAB.getFilename()));
         Parent root = loader.load();
 
-        // load controller and init data if needed
+        MainAdminController controller = loader.getController();
+        controller.initData(currentLogin);
 
         Stage stage = (Stage) loginPane.getScene().getWindow();
         stage.setScene(new Scene(root));

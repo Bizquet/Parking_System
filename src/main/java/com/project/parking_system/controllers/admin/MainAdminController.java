@@ -1,7 +1,10 @@
 package com.project.parking_system.controllers.admin;
 
 import com.project.parking_system.Main;
+import com.project.parking_system.Repositories.AuthenticationRepository;
 import com.project.parking_system.controllers.View;
+import com.project.parking_system.datamodel.EmployeeRegistrationDTO;
+import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,9 +23,17 @@ public class MainAdminController {
     @FXML
     private BorderPane mainAdminPane;
 
-    // create model class for teller
     @FXML
 //    private TableView<Teller> tellerTable;
+
+    private LoginDTO currentLogin;
+    private AuthenticationRepository auth;
+
+    public void initData(LoginDTO currentLogin){
+        this.currentLogin = currentLogin;
+        this.auth = new AuthenticationRepository();
+    }
+
 
     public void initialize(){
         // call task to populate table here
@@ -47,8 +58,28 @@ public class MainAdminController {
 
         Optional<ButtonType> result = dialog.showAndWait();
 
+        AddAccountDialogController controller = loader.getController();
+
         if(result.isPresent() && result.get() == ButtonType.OK){
-            // call controller add do necessary stuff like adding to db
+            if(controller.isSomeFieldEmpty()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Some Fields are Empty");
+                alert.setHeaderText(null);
+                alert.setContentText("Please fill all the missing fields");
+                alert.showAndWait();
+                return;
+            } else if (!controller.arePassMatching()) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Passwords do not match");
+                alert.setHeaderText(null);
+                alert.setContentText("Please enter matching passwords");
+                alert.showAndWait();
+                return;
+            }
+
+            EmployeeRegistrationDTO newEmployee = controller.getNewEmployeeDetails();
+            auth.RegisterEmployee(newEmployee, currentLogin.getLogin_token());
+
         }
     }
 
