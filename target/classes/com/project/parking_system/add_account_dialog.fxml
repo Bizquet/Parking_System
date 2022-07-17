@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.collections.FXCollections?>
 <DialogPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.project.parking_system.controllers.admin.AddAccountDialogController" stylesheets="@stylesheet.css">
@@ -21,14 +18,7 @@
             <PasswordField fx:id="passField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
             <Label text="Confirm" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
             <PasswordField fx:id="passFieldConfirm" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-<!--            <Label text="Role:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>-->
-<!--            <ComboBox GridPane.rowSpan="3" GridPane.columnIndex="1">-->
-<!--                <items>-->
-<!--                    <FXCollections fx:factory="observableArrayList">-->
-<!--                        <String fx:value="T"-->
-<!--                    </FXCollections>-->
-<!--                </items>-->
-<!--            </ComboBox>-->
+
         </GridPane>
     </content>
 

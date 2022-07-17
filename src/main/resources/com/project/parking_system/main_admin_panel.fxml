@@ -6,22 +6,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.project.parking_system.controllers.admin.MainAdminController" stylesheets="@stylesheet.css">
    <top>
-<!--       Add fx: id teller table-->
-      <TableView prefHeight="425.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tellerTable" prefHeight="425.0" prefWidth="960.0" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn prefWidth="75.0" text="UID">
-<!--               <cellValueFactory>-->
-<!--                  <PropertyValueFactory property="transaction_id" />-->
-<!--               </cellValueFactory>-->
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
             </TableColumn>
             <TableColumn prefWidth="75.0" text="Role">
-
+                <cellValueFactory>
+                    <PropertyValueFactory property="role" />
+                </cellValueFactory>
             </TableColumn>
             <TableColumn prefWidth="75.0" text="Username">
-
+                <cellValueFactory>
+                    <PropertyValueFactory property="username" />
+                </cellValueFactory>
             </TableColumn>
          </columns>
          <columnResizePolicy>
