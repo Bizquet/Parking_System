@@ -78,7 +78,7 @@ public class AdminOperationRepository {
             if(responseEntity.getStatusCode() == HttpStatus.OK){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
                 return responseDTO;
-            }else if(responseEntity.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+            }else if(responseEntity.getStatusCode() == HttpStatus.BAD_REQUEST){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),false);
                 return responseDTO;
             }else{
@@ -122,7 +122,7 @@ public class AdminOperationRepository {
             if(responseEntity.getStatusCode() == HttpStatus.OK){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),true);
                 return responseDTO;
-            }else if(responseEntity.getStatusCode() == HttpStatus.UNPROCESSABLE_ENTITY){
+            }else if(responseEntity.getStatusCode() == HttpStatus.BAD_REQUEST){
                 ResponseDTO responseDTO = new ResponseDTO(responseEntity.getBody(),false);
                 return responseDTO;
             }else{
