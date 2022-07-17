@@ -4,6 +4,8 @@ module com.project.parking_system {
     requires com.fasterxml.jackson.core;
     requires com.google.zxing;
     requires webcam.capture;
+    requires spring.web;
+    requires com.google.gson;
 
     opens com.project.parking_system to javafx.fxml;
 //    opens com.project.parking_system.teller_tabs to javafx.fxml;
