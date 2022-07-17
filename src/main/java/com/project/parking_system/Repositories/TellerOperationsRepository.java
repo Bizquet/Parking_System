@@ -9,9 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class TellerOperationsRepository {
 
@@ -98,7 +96,7 @@ public class TellerOperationsRepository {
     }
 
     public ResponseDTO getAllUsers(String token) {
-        url = url + "api/teller/getallusers";
+        url = url + "/api/teller/getallusers";
         //Create Headers
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -129,6 +127,45 @@ public class TellerOperationsRepository {
             }
         } catch (HttpServerErrorException ex) {
             return new ResponseDTO("Server Error", false);
+        }
+    }
+    public ResponseDTO getUserInfo(String uid,String token){
+        url=url+"/api/teller/getuserinfo";
+        //Create Headers
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+        //Add Authentication here
+        httpHeaders.set("Authorization",token);
+
+        Map<String,String> map = new HashMap<>();
+        map.put("uid",uid);
+        Gson gson = new Gson();
+        String json = gson.toJson(map);
+
+        //Compact to Entity
+        HttpEntity<String> entity = new HttpEntity<>(json,httpHeaders);
+
+        try{
+            ResponseEntity<String> responseEntity = restTemplate.exchange(
+                    url,
+                    HttpMethod.POST,
+                    entity,
+                    String.class);
+
+            Gson gson1 = new Gson();
+            UserDTO response = gson1.fromJson(responseEntity.getBody(),UserDTO.class);
+            return new ResponseDTO("Success",true,response);
+        }catch(HttpClientErrorException ex){
+            if(ex.getStatusCode()==HttpStatus.FORBIDDEN){
+                return new ResponseDTO("Failed Authentication",false);
+            }else{
+                return new ResponseDTO(ex.getStatusCode().toString(),false);
+            }
+        }catch (HttpServerErrorException ex){
+            return new ResponseDTO("Server Error",false);
         }
     }
 }
