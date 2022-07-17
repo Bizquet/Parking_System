@@ -2,13 +2,17 @@ module com.project.parking_system {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.fasterxml.jackson.core;
+    requires com.fasterxml.jackson.databind;
+    requires com.fasterxml.jackson.annotation;
     requires com.google.zxing;
+    requires com.google.zxing.javase;
     requires webcam.capture;
     requires spring.web;
     requires com.google.gson;
+    requires javafx.swing;
+    requires java.desktop;
 
     opens com.project.parking_system to javafx.fxml;
-//    opens com.project.parking_system.teller_tabs to javafx.fxml;
     exports com.project.parking_system;
     exports com.project.parking_system.controllers;
     exports com.project.parking_system.controllers.teller;

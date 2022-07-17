@@ -1,6 +1,8 @@
 package com.project.parking_system.controllers;
 
 import com.project.parking_system.Main;
+import com.project.parking_system.Repositories.AuthenticationRepository;
+import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,20 +23,30 @@ public class LoginController {
     @FXML
     private PasswordField passField;
 
+    private AuthenticationRepository auth = new AuthenticationRepository();
+    private static LoginDTO currentLogin;
+
     @FXML
     public void login() throws IOException {
         // add authentication/API call
+        currentLogin = auth.login(txtName.getText(),passField.getText());
 
+        if(currentLogin.getLogin_token() == null || currentLogin.getRole() == null){
 
-        if(txtName.getText().equals("teller")){
-            switchToTeller();
-        }else{
-            switchToAdmin();
+            // Add alert dialog
+            System.out.println("Wrong credentials");
+            currentLogin = null;
+        }else {
+            switch (currentLogin.getRole()){
+                case "ADMIN_USER":
+                    switchToAdmin();
+                    break;
+                case "TELLER_USER":
+                    switchToTeller();
+                    break;
+            }
         }
-        // go to Teller
-        //switchToTeller();
-        // go to Admin
-        //switchToAdmin();
+
     }
 
     /**

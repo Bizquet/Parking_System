@@ -31,6 +31,7 @@ public class MainTellerController implements Initializable {
             contentArea.getChildren().removeAll();
             contentArea.getChildren().setAll(homePane);
 
+
         } catch (IOException ex){
             ex.printStackTrace();
         }

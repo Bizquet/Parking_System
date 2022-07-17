@@ -5,40 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Added rudimentary teller login PART TWO">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking-svgrepo-com.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2022_16_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2022_16_51__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/add_account_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/add_account_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/analytics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/analytics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/change_password_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/change_password_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/client_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/client_list.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/TellerOperationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/TellerOperationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_nparked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_nparked.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_parked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_parked.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/add_account_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/add_account_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/analytics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/analytics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/change_password_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/change_password_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/client_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/client_list.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_generate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_generate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_nparked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_nparked.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
@@ -138,7 +121,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Fresh" />

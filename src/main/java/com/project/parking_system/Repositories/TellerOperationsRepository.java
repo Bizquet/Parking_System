@@ -47,6 +47,7 @@ public class TellerOperationsRepository {
             return new ResponseDTO("Server Error",false);
         }
     }
+
     public ResponseDTO AddUser(UserDTO userDTO,String token){
         url = url+"/api/teller/add";
 
@@ -127,7 +128,8 @@ public class TellerOperationsRepository {
             return new ResponseDTO("Server Error", false);
         }
     }
-    public ResponseDTO getUserInfo(String uid,String token){
+
+    public ResponseDTO getUserInfo(String uid, String token){
         url=url+"/api/teller/getuserinfo";
         //Create Headers
         RestTemplate restTemplate = new RestTemplate();
