@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="qrMainPane" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.QRScanController">
+            fx:controller="com.project.parking_system.controllers.teller.QRScanController" stylesheets="@stylesheet.css">
    <children>
       <Button layoutX="321.0" layoutY="258.0" mnemonicParsing="false" onAction="#changeScene" text="Change to Secondary Pane" />
    </children>

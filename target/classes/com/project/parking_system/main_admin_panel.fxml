@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.admin.MainAdminController">
+            fx:controller="com.project.parking_system.controllers.admin.MainAdminController" stylesheets="@stylesheet.css">
    <top>
 <!--       Add fx: id teller table-->
       <TableView prefHeight="425.0" prefWidth="960.0" BorderPane.alignment="CENTER">
@@ -30,17 +30,17 @@
       </TableView>
    </top>
    <bottom>
-      <AnchorPane prefHeight="115.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+      <AnchorPane id="DarkPanel" prefHeight="115.0" prefWidth="960.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="109.0" layoutY="35.0" mnemonicParsing="false" onAction="#showAddAccountDialog"
+            <Button id="RedButton" layoutX="109.0" layoutY="35.0" mnemonicParsing="false" onAction="#showAddAccountDialog"
                     text="Add Account" />
-            <Button layoutX="285.0" layoutY="35.0" mnemonicParsing="false" onAction="#showDeleteAccountDialog"
+            <Button id="RedButton" layoutX="285.0" layoutY="35.0" mnemonicParsing="false" onAction="#showDeleteAccountDialog"
                     text="Delete Account" />
-            <Button layoutX="554.0" layoutY="35.0" mnemonicParsing="false" onAction="#showChangePasswordDialog"
+            <Button id="RedButton" layoutX="554.0" layoutY="35.0" mnemonicParsing="false" onAction="#showChangePasswordDialog"
                     text="Change Password" />
-            <Button layoutX="767.0" layoutY="35.0" mnemonicParsing="false" onAction="#changeToAnalytics"
+            <Button id="RedButton" layoutX="767.0" layoutY="35.0" mnemonicParsing="false" onAction="#changeToAnalytics"
                     text="Analytics" />
-            <Button layoutX="453.0" layoutY="76.0" mnemonicParsing="false" onAction="#logout"
+            <Button id="BlueButton" layoutX="453.0" layoutY="76.0" mnemonicParsing="false" onAction="#logout"
                     text="Logout" />
          </children>
       </AnchorPane>

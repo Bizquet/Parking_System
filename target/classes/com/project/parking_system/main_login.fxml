@@ -6,14 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="960.0"
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.parking_system.controllers.LoginController">
    <children>
-      <Label layoutX="377.0" layoutY="110.0" text="Parking Management System Login" />
+      <Label id="BoldText" layoutX="377.0" layoutY="110.0" text="Parking Management System Login" />
       <Label layoutX="315.0" layoutY="196.0" text="Username" />
       <Label layoutX="316.0" layoutY="247.0" text="Password" />
       <TextField fx:id="txtName" layoutX="433.0" layoutY="192.0" />
       <PasswordField fx:id="passField" layoutX="433.0" layoutY="243.0" />
-      <Button layoutX="455.0" layoutY="359.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <Button id="RedButton" layoutX="455.0" layoutY="359.0" mnemonicParsing="false" onAction="#login" text="Login" />
    </children>
 </AnchorPane>

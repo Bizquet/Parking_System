@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane fx:id="parkedPane" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.QRParkedController">
+            fx:controller="com.project.parking_system.controllers.teller.QRParkedController" stylesheets="@stylesheet.css">
    <children>
       <Label layoutX="99.0" layoutY="77.0" text="Customer Details" />
       <Button fx:id="checkout" layoutX="367.0" layoutY="357.0" mnemonicParsing="false" text="Checkout" />

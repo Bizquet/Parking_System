@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="qrPane" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.QRGenerateController">
+            fx:controller="com.project.parking_system.controllers.teller.QRGenerateController" stylesheets="@stylesheet.css">
 
    <children>
       <Button layoutX="357.0" layoutY="378.0" mnemonicParsing="false" onAction="#showMap" text="Open Map.. " />

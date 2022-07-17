@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.MapDialogController">
+            fx:controller="com.project.parking_system.controllers.teller.MapDialogController" stylesheets="@stylesheet.css">
    <children>
       <Label layoutX="348.0" layoutY="217.0" text="Parking Map Dialog" />
       <Button layoutX="378.0" layoutY="305.0" mnemonicParsing="false" onAction="#closeDialog" text="Close" />

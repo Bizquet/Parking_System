@@ -8,7 +8,7 @@
 
 <DialogPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.project.parking_system.controllers.admin.AddAccountDialogController">
+            fx:controller="com.project.parking_system.controllers.admin.AddAccountDialogController" stylesheets="@stylesheet.css">
     <headerText>
         Input Username and Password for teller
     </headerText>

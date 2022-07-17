@@ -4,7 +4,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="clientListPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+<BorderPane fx:id="clientListPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@stylesheet.css"
             prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TableView prefHeight="519.0" prefWidth="800.0" BorderPane.alignment="CENTER">
