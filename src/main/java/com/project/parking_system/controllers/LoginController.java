@@ -25,11 +25,17 @@ public class LoginController {
     public void login() throws IOException {
         // add authentication/API call
 
+        System.out.println(txtName.getText());
 
+        if(txtName.getText().equals("teller")){
+            switchToTeller();
+        }else{
+            switchToAdmin();
+        }
         // go to Teller
-//        switchToTeller();
+        //switchToTeller();
         // go to Admin
-        switchToAdmin();
+        //switchToAdmin();
     }
 
     /**
