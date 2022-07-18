@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Removed changeScene function in QRScan Controller and&#10;Added initData for QR Parked and QRnParked">
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Added function to populate clientList table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTOFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTOFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/client_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/client_list.fxml" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658177481715</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added function to populate clientList table">
+      <created>1658181566111</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658181566111</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -180,7 +184,8 @@
     <MESSAGE value="Added QR scanner functionality" />
     <MESSAGE value="Added Constructors to SigninDTO and SignoutDTO" />
     <MESSAGE value="Removed changeScene function in QRScan Controller and&#10;Added initData for QR Parked and QRnParked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed changeScene function in QRScan Controller and&#10;Added initData for QR Parked and QRnParked" />
+    <MESSAGE value="Added function to populate clientList table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added function to populate clientList table" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

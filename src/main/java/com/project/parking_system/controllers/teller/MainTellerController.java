@@ -1,6 +1,7 @@
 package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.Main;
+import com.project.parking_system.controllers.LoginResource;
 import com.project.parking_system.controllers.View;
 import com.project.parking_system.datamodel.LoginDTO;
 import javafx.event.ActionEvent;
@@ -96,6 +97,8 @@ public class MainTellerController implements Initializable {
         // Code to switch to login
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();
+
+        LoginResource.token = null;
 
         Stage stage = (Stage) mainTabPane.getScene().getWindow();
         stage.setScene(new Scene(root));
