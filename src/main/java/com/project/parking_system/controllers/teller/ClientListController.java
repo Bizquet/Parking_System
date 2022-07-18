@@ -23,7 +23,7 @@ public class ClientListController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Task<ObservableList<UserDTOFX>> task = new GetAllUsersTask(LoginController.token);
+        Task<ObservableList<UserDTOFX>> task = new GetAllUsersTask(LoginController.tokenString);
         clientTable.itemsProperty().bind(task.valueProperty());
         new Thread(task).start();
     }

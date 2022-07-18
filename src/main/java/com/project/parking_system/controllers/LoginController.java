@@ -3,7 +3,6 @@ package com.project.parking_system.controllers;
 import com.project.parking_system.Main;
 import com.project.parking_system.Repositories.AuthenticationRepository;
 import com.project.parking_system.controllers.admin.MainAdminController;
-import com.project.parking_system.controllers.teller.MainTellerController;
 import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +24,7 @@ public class LoginController {
     @FXML
     private PasswordField passField;
 
-    public static String token;
+    public static String tokenString;
 
     private AuthenticationRepository auth = new AuthenticationRepository();
     private static LoginDTO currentLogin;
@@ -40,7 +39,7 @@ public class LoginController {
             System.out.println("Wrong credentials");
             ;
         }else {
-            token = currentLogin.getLogin_token();
+            tokenString = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
                     switchToAdmin(currentLogin);

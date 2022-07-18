@@ -46,7 +46,7 @@ public class MainAdminController {
     }
 
     private void refreshTable(){
-        Task<ObservableList<EmployeeDTOFX>> task = new GetAllEmployeesTask(LoginController.token);
+        Task<ObservableList<EmployeeDTOFX>> task = new GetAllEmployeesTask(LoginController.tokenString);
         tellerTable.itemsProperty().bind(task.valueProperty());
 
         new Thread(task).start();
@@ -92,7 +92,7 @@ public class MainAdminController {
             }
 
             EmployeeRegistrationDTO newEmployee = controller.getNewEmployeeDetails();
-            auth.RegisterEmployee(newEmployee, LoginController.token);
+            auth.RegisterEmployee(newEmployee, LoginController.tokenString);
             refreshTable();
 
         }
@@ -123,7 +123,7 @@ public class MainAdminController {
 
         Optional<ButtonType> result = alert.showAndWait();
         if(result.isPresent() && result.get() == ButtonType.OK){
-            adminOp.DeleteEmployee(selectedEmployee, LoginController.token);
+            adminOp.DeleteEmployee(selectedEmployee, LoginController.tokenString);
             refreshTable();
         }
     }
@@ -180,7 +180,7 @@ public class MainAdminController {
                 return;
             }
             selectedEmployee.setPassword(controller.getNewPassword());
-            adminOp.ChangeEmployeePassword(selectedEmployee, LoginController.token);
+            adminOp.ChangeEmployeePassword(selectedEmployee, LoginController.tokenString);
             refreshTable();
         }
 
@@ -201,7 +201,7 @@ public class MainAdminController {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();
 
-        LoginController.token = null;
+        LoginController.tokenString = null;
 
         Stage stage = (Stage) mainAdminPane.getScene().getWindow();
         stage.setScene(new Scene(root));

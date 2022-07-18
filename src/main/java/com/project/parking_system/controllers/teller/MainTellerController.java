@@ -96,7 +96,7 @@ public class MainTellerController implements Initializable {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();
 
-        LoginController.token = null;
+        LoginController.tokenString = null;
 
         Stage stage = (Stage) mainTabPane.getScene().getWindow();
         stage.setScene(new Scene(root));
