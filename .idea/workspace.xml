@@ -4,35 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Added loginDTO to all controller classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/QRGenerator.java" afterDir="false" />
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Removed loginDTO to all controller classes, Made a string for token instead. Also added QRGenerator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/admin/MainAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/admin/MainAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRParkedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRParkedController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRnParkedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRnParkedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/change_password_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/change_password_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/ChangePasswordDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/ChangePasswordDialogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/MainAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/MainAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ClientListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ClientListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRGenerateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRGenerateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/datamodel/EmployeeRegistrationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/datamodel/EmployeeRegistrationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/QRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/QRGenerator.java" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658149281733</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Removed loginDTO to all controller classes, Made a string for token instead. Also added QRGenerator">
+      <created>1658156208569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658156208569</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed loginDTO to all controller classes, Made a string for token instead. Also added QRGenerator">
+      <created>1658156224981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658156224981</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -165,7 +154,8 @@
     <MESSAGE value="Added add account functionality, added constructor for EmployeeRegistrationDTO" />
     <MESSAGE value="Added delete account functionality. Also added ability to refresh table during reach API transaction." />
     <MESSAGE value="Added loginDTO to all controller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added loginDTO to all controller classes" />
+    <MESSAGE value="Removed loginDTO to all controller classes, Made a string for token instead. Also added QRGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed loginDTO to all controller classes, Made a string for token instead. Also added QRGenerator" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

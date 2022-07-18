@@ -1,11 +1,13 @@
 package com.project.parking_system.controllers.teller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.sarxos.webcam.Webcam;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 import com.project.parking_system.Main;
 import com.project.parking_system.controllers.View;
+import com.project.parking_system.datamodel.UserDTO;
 import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -80,7 +82,7 @@ public class QRScanController implements Initializable {
     }
 
     protected void initWebcam(){
-        Task<Void> webCaminitialize = new Task<Void>() {
+        Task<Void> webCamInitialize = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
                 webcam = Webcam.getWebcams().get(0);
@@ -91,7 +93,7 @@ public class QRScanController implements Initializable {
             }
         };
 
-        new Thread(webCaminitialize).start();
+        new Thread(webCamInitialize).start();
 
     }
 
@@ -121,7 +123,11 @@ public class QRScanController implements Initializable {
                                         .toFXImage(grabbedImage, null);
                                 imageProperty.set(mainImage);
 
-                                readQR();
+                                try {
+                                    readQR();
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
                             });
                             grabbedImage.flush();
                         }
@@ -142,7 +148,7 @@ public class QRScanController implements Initializable {
 
     }
 
-    protected void readQR(){
+    protected void readQR() throws IOException {
 
         Result result = null;
 
@@ -157,11 +163,15 @@ public class QRScanController implements Initializable {
         }
 
         if(result != null){
-            // Check the parked field if null go to nParked else go to Parked
-            // switch case here
-            // prolly create instance of helper class and go
 
+            ObjectMapper mapper = new ObjectMapper();
+            UserDTO currentCustomer = mapper.readValue(result.toString(), UserDTO.class);
             stopCamera();
+            if(currentCustomer.getParking_slot() != null){
+                switchToParked();
+            } else{
+                switchToNParked();
+            }
 
         }
     }
