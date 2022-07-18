@@ -1,8 +1,12 @@
 package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.datamodel.LoginDTO;
+import com.project.parking_system.datamodel.UserDTO;
 
 public class QRParkedController {
-    // use api call to get details and use string builder to populate info
+    private UserDTO currentCustomer;
 
+    public void initData(UserDTO currentCustomer){
+        this.currentCustomer = currentCustomer;
+    }
 }

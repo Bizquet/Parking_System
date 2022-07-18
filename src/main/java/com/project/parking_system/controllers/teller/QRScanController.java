@@ -48,29 +48,25 @@ public class QRScanController implements Initializable {
         this.contentArea = pane;
     }
 
-    @FXML
-    public void changeScene() throws IOException {
-        //comment out each part
-        switchToNParked();
-//        switchToParked();
-    }
 
     // not sure if need to pass in actionEvent parameter
-    private void switchToNParked() throws IOException {
+    private void switchToNParked(UserDTO currentCustomer) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.QR_SCAN_NPARKED.getFilename()));
         Parent root = loader.load();
 
-        // controller if needed
+        QRParkedController controller = loader.getController();
+        controller.initData(currentCustomer);
 
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
     }
 
-    private void switchToParked() throws IOException {
+    private void switchToParked(UserDTO currentCustomer) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.QR_SCAN_PARKED.getFilename()));
         Parent root = loader.load();
 
-        // controller if needed
+        QRnParkedController controller = loader.getController();
+        controller.initData(currentCustomer);
 
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
@@ -169,9 +165,9 @@ public class QRScanController implements Initializable {
             stopCamera();
             if(currentCustomer.getParking_slot() != null){
                 // add init data to pass result to string/object
-                switchToParked();
+                switchToParked(currentCustomer);
             } else{
-                switchToNParked();
+                switchToNParked(currentCustomer);
             }
 
         }
