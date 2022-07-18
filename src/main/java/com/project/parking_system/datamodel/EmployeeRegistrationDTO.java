@@ -15,6 +15,11 @@ public class EmployeeRegistrationDTO {
         this.role = role;
     }
 
+    public EmployeeRegistrationDTO(String username, String role) {
+        this.username = username;
+        this.role = role;
+    }
+
     public String getUsername() {
         return username;
     }

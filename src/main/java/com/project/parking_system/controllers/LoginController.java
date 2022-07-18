@@ -31,7 +31,7 @@ public class LoginController {
     @FXML
     public void login() throws IOException {
         // add authentication/API call
-        currentLogin = auth.login(txtName.getText(),passField.getText());
+        currentLogin = auth.login(txtName.getText(), passField.getText());
 
         if(currentLogin.getLogin_token() == null || currentLogin.getRole() == null){
 

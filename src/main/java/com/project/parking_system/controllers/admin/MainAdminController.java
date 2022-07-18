@@ -133,21 +133,23 @@ public class MainAdminController {
 
     @FXML
     public void showChangePasswordDialog(){
-        //        Example of getting selection from table
-//        Contact selectedContact = contactsTable.getSelectionModel().getSelectedItem();
-//
-//        if(selectedContact == null){
-//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//            alert.setTitle("No Teller Selected");
-//            alert.setHeaderText(null);
-//            alert.setContentText("Please select teller to change the password delete");
-//            alert.showAndWait();
-//            return;
-//        }
+        EmployeeDTOFX selectedEmployeeFX = (EmployeeDTOFX) tellerTable.getSelectionModel().getSelectedItem();
+
+        if(selectedEmployeeFX == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("No Teller Selected");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select teller you want to modify");
+            alert.showAndWait();
+            return;
+        }
+
+        EmployeeRegistrationDTO selectedEmployee = new EmployeeRegistrationDTO(selectedEmployeeFX.getUsername(),
+                selectedEmployeeFX.getRole());
 
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.initOwner(mainAdminPane.getScene().getWindow());
-        dialog.setTitle("Add Account");
+        dialog.setTitle("Change Password");
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.CHANGE_PASSWORD.getFilename()));
 
         try{
@@ -162,9 +164,28 @@ public class MainAdminController {
 
         Optional<ButtonType> result = dialog.showAndWait();
 
-//        if(result.isPresent() && result.get() == ButtonType.OK){
-//            // call controller and change password
-//        }
+        ChangePasswordDialogController controller = loader.getController();
+
+        if(result.isPresent() && result.get() == ButtonType.OK){
+            if(controller.isSomeFieldEmpty()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Some Fields are Empty");
+                alert.setHeaderText(null);
+                alert.setContentText("Please fill all the missing fields");
+                alert.showAndWait();
+                return;
+            } else if (!controller.arePassMatching()) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Passwords do not match");
+                alert.setHeaderText(null);
+                alert.setContentText("Please enter matching passwords");
+                alert.showAndWait();
+                return;
+            }
+            selectedEmployee.setPassword(controller.getNewPassword());
+            adminOp.ChangeEmployeePassword(selectedEmployee, currentLogin.getLogin_token());
+            refreshTable();
+        }
 
     }
 
@@ -182,6 +203,8 @@ public class MainAdminController {
     public void logout() throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();
+
+
 
         Stage stage = (Stage) mainAdminPane.getScene().getWindow();
         stage.setScene(new Scene(root));
