@@ -4,22 +4,27 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="clientListPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@stylesheet.css"
-            prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            stylesheets="@stylesheet.css" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parking_system.controllers.teller.ClientListController">
    <center>
-      <TableView prefHeight="519.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="clientTable" prefHeight="519.0" prefWidth="800.0" BorderPane.alignment="CENTER">
         <columns>
             <TableColumn prefWidth="75.0" text="Slot">
-
-            </TableColumn>
-            <TableColumn prefWidth="75.0" text="Name">
-
+                <cellValueFactory>
+                    <PropertyValueFactory property="parking_slot" />
+                </cellValueFactory>
             </TableColumn>
             <TableColumn prefWidth="75.0" text="Contact No.">
-
+                <cellValueFactory>
+                    <PropertyValueFactory property="contactNum" />
+                </cellValueFactory>
             </TableColumn>
             <TableColumn prefWidth="75.0" text="Plate No.">
-
+                <cellValueFactory>
+                    <PropertyValueFactory property="plateNum" />
+                </cellValueFactory>
             </TableColumn>
         </columns>
          <columnResizePolicy>

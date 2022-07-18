@@ -6,18 +6,13 @@ import javafx.beans.property.SimpleStringProperty;
 public class UserDTOFX {
 
     private SimpleStringProperty parking_slot = new SimpleStringProperty("");
-    private SimpleStringProperty timeStamp = new SimpleStringProperty("");
     private SimpleDoubleProperty contactNum = new SimpleDoubleProperty();
     private SimpleStringProperty plateNum = new SimpleStringProperty("");
-    private SimpleStringProperty uid = new SimpleStringProperty("");
 
-    public UserDTOFX(String parking_slot, String timeStamp,
-                     double contactNum, String plateNum, String uid) {
+    public UserDTOFX(String parking_slot, double contactNum, String plateNum) {
         this.parking_slot.set(parking_slot);
-        this.timeStamp.set(timeStamp);
         this.contactNum.set(contactNum);
         this.plateNum.set(plateNum);
-        this.uid.set(uid);
     }
 
     public UserDTOFX() {
@@ -33,18 +28,6 @@ public class UserDTOFX {
 
     public void setParking_slot(String parking_slot) {
         this.parking_slot.set(parking_slot);
-    }
-
-    public String getTimeStamp() {
-        return timeStamp.get();
-    }
-
-    public SimpleStringProperty timeStampProperty() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(String timeStamp) {
-        this.timeStamp.set(timeStamp);
     }
 
     public double getContactNum() {
@@ -71,15 +54,4 @@ public class UserDTOFX {
         this.plateNum.set(plateNum);
     }
 
-    public String getUid() {
-        return uid.get();
-    }
-
-    public SimpleStringProperty uidProperty() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid.set(uid);
-    }
 }
