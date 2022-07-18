@@ -3,6 +3,7 @@ package com.project.parking_system.controllers.admin;
 import com.project.parking_system.Main;
 import com.project.parking_system.Repositories.AdminOperationRepository;
 import com.project.parking_system.Repositories.AuthenticationRepository;
+import com.project.parking_system.controllers.LoginResource;
 import com.project.parking_system.controllers.View;
 import com.project.parking_system.datamodel.EmployeeDTO;
 import com.project.parking_system.datamodel.EmployeeDTOFX;
@@ -34,13 +35,10 @@ public class MainAdminController {
 
     @FXML
     private TableView tellerTable;
-
-    private LoginDTO currentLogin;
     private AuthenticationRepository auth;
     private AdminOperationRepository adminOp;
 
-    public void initData(LoginDTO currentLogin){
-        this.currentLogin = currentLogin;
+    public void initData(){
         this.auth = new AuthenticationRepository();
         this.adminOp = new AdminOperationRepository();
 
@@ -49,7 +47,7 @@ public class MainAdminController {
     }
 
     private void refreshTable(){
-        Task<ObservableList<EmployeeDTOFX>> task = new GetAllEmployeesTask(currentLogin.getLogin_token());
+        Task<ObservableList<EmployeeDTOFX>> task = new GetAllEmployeesTask(LoginResource.token);
         tellerTable.itemsProperty().bind(task.valueProperty());
 
         new Thread(task).start();
@@ -95,7 +93,7 @@ public class MainAdminController {
             }
 
             EmployeeRegistrationDTO newEmployee = controller.getNewEmployeeDetails();
-            auth.RegisterEmployee(newEmployee, currentLogin.getLogin_token());
+            auth.RegisterEmployee(newEmployee, LoginResource.token);
             refreshTable();
 
         }
@@ -126,7 +124,7 @@ public class MainAdminController {
 
         Optional<ButtonType> result = alert.showAndWait();
         if(result.isPresent() && result.get() == ButtonType.OK){
-            adminOp.DeleteEmployee(selectedEmployee, currentLogin.getLogin_token());
+            adminOp.DeleteEmployee(selectedEmployee, LoginResource.token);
             refreshTable();
         }
     }
@@ -183,7 +181,7 @@ public class MainAdminController {
                 return;
             }
             selectedEmployee.setPassword(controller.getNewPassword());
-            adminOp.ChangeEmployeePassword(selectedEmployee, currentLogin.getLogin_token());
+            adminOp.ChangeEmployeePassword(selectedEmployee, LoginResource.token);
             refreshTable();
         }
 
@@ -204,7 +202,7 @@ public class MainAdminController {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();
 
-
+        LoginResource.token = null;
 
         Stage stage = (Stage) mainAdminPane.getScene().getWindow();
         stage.setScene(new Scene(root));

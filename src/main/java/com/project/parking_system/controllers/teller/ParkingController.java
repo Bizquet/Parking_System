@@ -8,12 +8,6 @@ import javafx.scene.control.Button;
 
 public class ParkingController {
 
-    private LoginDTO currentLogin;
-    public void initData(LoginDTO currentLogin){
-        this.currentLogin = currentLogin;
-    }
-
-
     // on initialize refresh buttons with api calls on which are taken
     @FXML
     public void showParkingDialog(ActionEvent e){

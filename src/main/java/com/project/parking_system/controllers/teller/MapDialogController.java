@@ -11,9 +11,8 @@ public class MapDialogController {
     private LoginDTO currentLogin;
 
     // add more stuff like possibly some api calls
-    public void initData(Stage stage, LoginDTO currentLogin){
+    public void initData(Stage stage){
         this.stage = stage;
-        this.currentLogin = currentLogin;
     }
 
     // create function when finished call api

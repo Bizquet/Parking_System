@@ -5,9 +5,4 @@ import com.project.parking_system.datamodel.LoginDTO;
 public class QRnParkedController {
     // just use the parking dialog class here (basically the same)
 
-    private LoginDTO currentLogin;
-
-    public void initData(LoginDTO currentLogin){
-        this.currentLogin = currentLogin;
-    }
 }

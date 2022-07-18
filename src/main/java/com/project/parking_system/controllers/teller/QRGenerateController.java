@@ -52,7 +52,7 @@ public class QRGenerateController implements Initializable {
         stage.setTitle("Parking Map");
         stage.setScene(new Scene(root));
         MapDialogController dialogController = loader.getController();
-        dialogController.initData(stage, currentLogin);
+        dialogController.initData(stage);
         stage.showAndWait();
 
     }

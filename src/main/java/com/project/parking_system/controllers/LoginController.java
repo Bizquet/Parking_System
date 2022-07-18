@@ -38,6 +38,7 @@ public class LoginController {
             System.out.println("Wrong credentials");
             ;
         }else {
+            LoginResource.token = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
                     switchToAdmin(currentLogin);
@@ -59,9 +60,6 @@ public class LoginController {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.TELLER_TAB.getFilename()));
         Parent root = loader.load();
 
-        MainTellerController controller = loader.getController();
-        controller.initData(currentLogin);
-
         Stage stage = (Stage) loginPane.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
@@ -75,10 +73,11 @@ public class LoginController {
         Parent root = loader.load();
 
         MainAdminController controller = loader.getController();
-        controller.initData(currentLogin);
+        controller.initData();
 
         Stage stage = (Stage) loginPane.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
     }
 }
+

@@ -123,9 +123,7 @@ public class QRScanController implements Initializable {
 
                                 readQR();
                             });
-
                             grabbedImage.flush();
-
                         }
                     } catch (Exception e) {
                         throw new RuntimeException(e);
@@ -161,6 +159,8 @@ public class QRScanController implements Initializable {
         if(result != null){
             // Check the parked field if null go to nParked else go to Parked
             // switch case here
+            // prolly create instance of helper class and go
+
             stopCamera();
 
         }
@@ -171,6 +171,7 @@ public class QRScanController implements Initializable {
         webcam.open();
     }
 
+    @FXML
     private void stopCamera(){
         stopCamera = true;
         webcam.close();

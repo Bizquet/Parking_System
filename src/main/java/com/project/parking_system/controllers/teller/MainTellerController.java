@@ -3,11 +3,13 @@ package com.project.parking_system.controllers.teller;
 import com.project.parking_system.Main;
 import com.project.parking_system.controllers.View;
 import com.project.parking_system.datamodel.LoginDTO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -23,12 +25,6 @@ public class MainTellerController implements Initializable {
 
     @FXML
     private BorderPane mainTabPane;
-
-    private LoginDTO currentLogin;
-
-    public void initData(LoginDTO currentLogin){
-        this.currentLogin = currentLogin;
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -78,7 +74,7 @@ public class MainTellerController implements Initializable {
     }
 
     @FXML
-    public void toScanQR() throws IOException {
+    public void toScanQR(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.QR_SCAN.getFilename()));
         Parent root = loader.load();
 
@@ -89,6 +85,7 @@ public class MainTellerController implements Initializable {
 
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
+
     }
 
     @FXML
