@@ -42,7 +42,6 @@ public class MainTellerController implements Initializable {
         } catch (IOException ex){
             ex.printStackTrace();
         }
-        
     }
 
     @FXML
@@ -91,8 +90,6 @@ public class MainTellerController implements Initializable {
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(root);
     }
-
-
 
     @FXML
     public void logout() throws IOException{

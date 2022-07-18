@@ -33,11 +33,10 @@ public class LoginController {
         // add authentication/API call
         currentLogin = auth.login(txtName.getText(), passField.getText());
 
-        if(currentLogin.getLogin_token() == null || currentLogin.getRole() == null){
-
+        if(currentLogin == null){
             // Add alert dialog
             System.out.println("Wrong credentials");
-            currentLogin = null;
+            ;
         }else {
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
@@ -46,9 +45,11 @@ public class LoginController {
                 case "TELLER_USER":
                     switchToTeller(currentLogin);
                     break;
+                default:
+                    currentLogin = null;
+                    break;
             }
         }
-
     }
 
     /**

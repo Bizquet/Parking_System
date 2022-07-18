@@ -1,15 +1,19 @@
 package com.project.parking_system.controllers.teller;
 
+import com.project.parking_system.controllers.LoginController;
+import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
 public class MapDialogController {
 
     private Stage stage;
+    private LoginDTO currentLogin;
 
     // add more stuff like possibly some api calls
-    public void initData(Stage stage){
+    public void initData(Stage stage, LoginDTO currentLogin){
         this.stage = stage;
+        this.currentLogin = currentLogin;
     }
 
     // create function when finished call api

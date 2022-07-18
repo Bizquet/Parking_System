@@ -10,7 +10,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mainTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.teller.MainTellerController">
+<BorderPane fx:id="mainTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parking_system.controllers.teller.MainTellerController">
    <left>
       <Pane prefHeight="540.0" prefWidth="160.0" style="-fx-background-color: steelblue;" BorderPane.alignment="CENTER">
          <children>

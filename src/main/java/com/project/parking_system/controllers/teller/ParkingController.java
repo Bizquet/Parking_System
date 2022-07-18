@@ -1,10 +1,18 @@
 package com.project.parking_system.controllers.teller;
 
+import com.project.parking_system.controllers.LoginController;
+import com.project.parking_system.datamodel.LoginDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class ParkingController {
+
+    private LoginDTO currentLogin;
+    public void initData(LoginDTO currentLogin){
+        this.currentLogin = currentLogin;
+    }
+
 
     // on initialize refresh buttons with api calls on which are taken
     @FXML

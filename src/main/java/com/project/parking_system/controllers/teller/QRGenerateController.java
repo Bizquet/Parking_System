@@ -2,6 +2,7 @@ package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.Main;
 import com.project.parking_system.controllers.View;
+import com.project.parking_system.datamodel.LoginDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class QRGenerateController implements Initializable {
+
+    private LoginDTO currentLogin;
+
+    public void initData(LoginDTO currentLogin){
+        this.currentLogin = currentLogin;
+    }
 
     // Refresh Page after successful generation of QR
     @FXML
@@ -45,7 +52,7 @@ public class QRGenerateController implements Initializable {
         stage.setTitle("Parking Map");
         stage.setScene(new Scene(root));
         MapDialogController dialogController = loader.getController();
-        dialogController.initData(stage);
+        dialogController.initData(stage, currentLogin);
         stage.showAndWait();
 
     }
