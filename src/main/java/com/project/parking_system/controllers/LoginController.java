@@ -25,6 +25,8 @@ public class LoginController {
     @FXML
     private PasswordField passField;
 
+    public static String token;
+
     private AuthenticationRepository auth = new AuthenticationRepository();
     private static LoginDTO currentLogin;
 
@@ -38,7 +40,7 @@ public class LoginController {
             System.out.println("Wrong credentials");
             ;
         }else {
-            LoginResource.token = currentLogin.getLogin_token();
+            token = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
                     switchToAdmin(currentLogin);

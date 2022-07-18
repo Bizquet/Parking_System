@@ -1,7 +1,7 @@
 package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.Repositories.AdminOperationRepository;
-import com.project.parking_system.controllers.LoginResource;
+import com.project.parking_system.controllers.LoginController;
 import com.project.parking_system.datamodel.UserDTO;
 import com.project.parking_system.datamodel.UserDTOFX;
 import javafx.collections.FXCollections;
@@ -23,7 +23,7 @@ public class ClientListController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Task<ObservableList<UserDTOFX>> task = new GetAllUsersTask(LoginResource.token);
+        Task<ObservableList<UserDTOFX>> task = new GetAllUsersTask(LoginController.token);
         clientTable.itemsProperty().bind(task.valueProperty());
         new Thread(task).start();
     }
