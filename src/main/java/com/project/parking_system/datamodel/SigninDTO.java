@@ -6,6 +6,12 @@ public class SigninDTO {
     private String uid;
     private String parkingslot;
 
+    public SigninDTO(String timestamp, String uid, String parkingslot) {
+        this.timestamp = timestamp;
+        this.uid = uid;
+        this.parkingslot = parkingslot;
+    }
+
     public String getTimestamp() {
         return timestamp;
     }

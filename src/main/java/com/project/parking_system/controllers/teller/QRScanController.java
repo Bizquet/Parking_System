@@ -168,6 +168,7 @@ public class QRScanController implements Initializable {
             UserDTO currentCustomer = mapper.readValue(result.toString(), UserDTO.class);
             stopCamera();
             if(currentCustomer.getParking_slot() != null){
+                // add init data to pass result to string/object
                 switchToParked();
             } else{
                 switchToNParked();
@@ -185,6 +186,5 @@ public class QRScanController implements Initializable {
     private void stopCamera(){
         stopCamera = true;
         webcam.close();
-
     }
 }
