@@ -48,7 +48,7 @@ public class TellerOperationsRepository {
         }
     }
 
-    public ResponseDTO AddUser(UserDTO userDTO,String token){
+    public ResponseDTO addUser(UserDTO userDTO,String token){
         url = url+"/api/teller/add";
 
         //Set Normal headers
@@ -94,40 +94,40 @@ public class TellerOperationsRepository {
         }
     }
 
-    public ResponseDTO getAllUsers(String token) {
-        url = url + "/api/teller/getallusers";
-        //Create Headers
-        RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-        httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-
-        //Add Authentication here
-        httpHeaders.set("Authorization", token);
-
-        //Compact to Entity
-        HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
-
-        try {
-            ResponseEntity<String> responseEntity = restTemplate.exchange(
-                    url,
-                    HttpMethod.GET,
-                    entity,
-                    String.class);
-
-            Gson gson = new Gson();
-            List<UserDTOWithTimestampList> response = Arrays.asList(gson.fromJson(responseEntity.getBody(), UserDTOWithTimestampList[].class));
-            return new ResponseDTO("Success", true, response);
-        } catch (HttpClientErrorException ex) {
-            if (ex.getStatusCode() == HttpStatus.FORBIDDEN) {
-                return new ResponseDTO("Failed Authentication", false);
-            } else {
-                return new ResponseDTO(ex.getStatusCode().toString(), false);
-            }
-        } catch (HttpServerErrorException ex) {
-            return new ResponseDTO("Server Error", false);
-        }
-    }
+//    public ResponseDTO getAllUsers(String token) {
+//        url = url + "/api/teller/getallusers";
+//        //Create Headers
+//        RestTemplate restTemplate = new RestTemplate();
+//        HttpHeaders httpHeaders = new HttpHeaders();
+//        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+//        httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+//
+//        //Add Authentication here
+//        httpHeaders.set("Authorization", token);
+//
+//        //Compact to Entity
+//        HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
+//
+//        try {
+//            ResponseEntity<String> responseEntity = restTemplate.exchange(
+//                    url,
+//                    HttpMethod.GET,
+//                    entity,
+//                    String.class);
+//
+//            Gson gson = new Gson();
+//            List<UserDTOWithTimestampList> response = Arrays.asList(gson.fromJson(responseEntity.getBody(), UserDTOWithTimestampList[].class));
+//            return new ResponseDTO("Success", true, response);
+//        } catch (HttpClientErrorException ex) {
+//            if (ex.getStatusCode() == HttpStatus.FORBIDDEN) {
+//                return new ResponseDTO("Failed Authentication", false);
+//            } else {
+//                return new ResponseDTO(ex.getStatusCode().toString(), false);
+//            }
+//        } catch (HttpServerErrorException ex) {
+//            return new ResponseDTO("Server Error", false);
+//        }
+//    }
 
     public ResponseDTO getUserInfo(String uid, String token){
         url=url+"/api/teller/getuserinfo";
@@ -169,7 +169,7 @@ public class TellerOperationsRepository {
         }
     }
 
-    public ResponseDTO SignoutUser(SignOutDTO signOutDTO, String token){
+    public ResponseDTO signOutUser(SignOutDTO signOutDTO, String token){
         url = url+"api/teller/signout";
 
         //Set Normal headers
@@ -215,7 +215,7 @@ public class TellerOperationsRepository {
         }
     }
 
-    public ResponseDTO SigninUser(SigninDTO signinDTO, String token){
+    public ResponseDTO signInUser(SigninDTO signinDTO, String token){
         url = url+"api/teller/signin";
 
         //Set Normal headers
