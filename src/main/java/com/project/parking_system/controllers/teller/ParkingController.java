@@ -54,8 +54,6 @@ public class ParkingController {
 
     public void initialize(){
         initializeButtons();
-
-        // get list of all parked users from created task
     }
 
     // on initialize refresh buttons with api calls on which are taken
@@ -78,7 +76,7 @@ public class ParkingController {
             buttonStringList.add(buttonText);
         }
 
-        Task<ArrayList<UserDTO>> task = new GetAllUsers(LoginController.tokenString);
+        Task<ArrayList<UserDTO>> task = new GetAllSlots(LoginController.tokenString);
         ArrayList<UserDTO> userList = task.getValue();
         new Thread(task).start();
 
@@ -93,6 +91,7 @@ public class ParkingController {
                     takenSlotList.add(userDTO.getParking_slot());
                 }
             }
+            // uncomment to test taken slots
 //            takenSlotList.add("A1");
 //            takenSlotList.add("B1");
 //            takenSlotList.add("A2");
@@ -116,11 +115,11 @@ public class ParkingController {
 
 // create task to get all parked users
 
-class GetAllUsers extends Task{
+class GetAllSlots extends Task{
     protected final TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
     protected String token;
 
-    GetAllUsers(String token){
+    GetAllSlots(String token){
         this.token = token;
     }
 
