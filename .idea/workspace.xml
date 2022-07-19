@@ -4,39 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Final Part (fxml loading problem)">
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Fixed naming conventions in TellerOperationsRepository.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/TellerOperationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/TellerOperationsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/OldCustomerParkingMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/OldCustomerParkingMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRParkedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRParkedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRnParkedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRnParkedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTOFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTOFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_nparked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_nparked.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_parked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_scan_parked.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/AuthenticationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/datamodel/UserDTOFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/datamodel/UserDTOFX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_generate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_generate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_nparked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_nparked.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
@@ -70,12 +49,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.parking_system.Main" />
@@ -238,14 +211,7 @@
       <option name="project" value="LOCAL" />
       <updated>1658215685824</updated>
     </task>
-    <task id="LOCAL-00020" summary="Final Part (fxml loading problem)">
-      <created>1658230069419</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1658230069419</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -261,6 +227,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Fresh" />
@@ -280,8 +247,7 @@
     <MESSAGE value="Fixed class names to avoid confusion" />
     <MESSAGE value="Added alert in default parking map" />
     <MESSAGE value="Fixed naming conventions in TellerOperationsRepository.java" />
-    <MESSAGE value="Final Part (fxml loading problem)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Part (fxml loading problem)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed naming conventions in TellerOperationsRepository.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

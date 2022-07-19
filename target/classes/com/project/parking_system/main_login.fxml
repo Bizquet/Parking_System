@@ -4,18 +4,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.LoginController">
    <children>
       <Pane prefHeight="540.0" prefWidth="169.0" style="-fx-background-color: steelblue;" />
-      <Label id="BoldText" layoutX="377.0" layoutY="110.0" text="Parking Management System Login" />
-      <Label layoutX="315.0" layoutY="196.0" text="Username" />
-      <Label layoutX="316.0" layoutY="247.0" text="Password" />
-      <TextField fx:id="txtName" layoutX="433.0" layoutY="192.0" />
-      <PasswordField fx:id="passField" layoutX="433.0" layoutY="243.0" />
+      <Label id="BoldText" layoutX="406.0" layoutY="190.0" text="Parking Management System Login" />
+      <Label layoutX="366.0" layoutY="247.0" text="Username" />
+      <Label layoutX="368.0" layoutY="290.0" text="Password" />
+      <TextField fx:id="txtName" layoutX="462.0" layoutY="244.0" />
+      <PasswordField fx:id="passField" layoutX="462.0" layoutY="287.0" />
       <Button id="RedButton" layoutX="455.0" layoutY="359.0" mnemonicParsing="false" onAction="#login" text="Login" />
       <Pane layoutX="791.0" prefHeight="540.0" prefWidth="169.0" style="-fx-background-color: steelblue;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="431.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@parking-svgrepo-com.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

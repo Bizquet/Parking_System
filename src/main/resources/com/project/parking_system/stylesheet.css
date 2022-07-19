@@ -17,6 +17,10 @@
     -fx-text-fill: white;
 }
 
+#BGHolder{
+    -fx-background-image: url("bg-image.jpg");
+}
+
 #DarkPanel{
     -fx-background-color: steelblue;
 }

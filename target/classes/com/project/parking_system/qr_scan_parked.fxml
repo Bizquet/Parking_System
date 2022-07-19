@@ -14,7 +14,6 @@
    <Button layoutX="367.0" layoutY="357.0" mnemonicParsing="false" text="Checkout"
            onAction="#checkout"/>
    <Pane layoutX="99.0" layoutY="106.0" prefHeight="200.0" prefWidth="583.0" style="-fx-background-color: #F1FAEE;">
-      <TextArea fx:id="txtDetails" blendMode="COLOR_BURN" prefHeight="200.0" prefWidth="583.0"
-                style="-fx-background-color: #F1FAEE;"/>
+      <TextArea fx:id="txtDetails" prefHeight="200.0" prefWidth="583.0" style="-fx-background-color: #F1FAEE;" />
    </Pane>
 </AnchorPane>
