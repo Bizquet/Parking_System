@@ -8,12 +8,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class LoginController {
 
@@ -36,7 +39,7 @@ public class LoginController {
 
         if(currentLogin == null){
             // Add alert dialog
-            System.out.println("Wrong credentials");
+            credentialAlert();
         }else {
             tokenString = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){
@@ -46,12 +49,22 @@ public class LoginController {
                 case "TELLER_USER":
                     switchToTeller();
                     break;
-                default:
-                    currentLogin = null;
-                    break;
             }
         }
     }
+
+    private void credentialAlert(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid Credentials");
+        alert.setContentText("Please input correct credentials");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.isPresent() && result.get() == ButtonType.OK){
+            currentLogin = null;
+        }
+    }
+
 
     /**
      * Switches to the teller part of the app (might need to pass in account object or just api calls to store stuff)
