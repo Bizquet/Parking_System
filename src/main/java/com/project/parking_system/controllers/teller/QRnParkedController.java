@@ -38,6 +38,17 @@ public class QRnParkedController {
         OldCustomerParkingMap dialogController = loader.getController();
         dialogController.initData(currentCustomer.getUid());
         stage.showAndWait();
+
+        backToMainTeller();
+    }
+
+    private void backToMainTeller() throws IOException {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.TELLER_TAB.getFilename()));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) parkedPane.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
 }

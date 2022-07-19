@@ -135,7 +135,7 @@ public class TellerOperationsRepository {
     }
 
     public ResponseDTO signOutUser(SignOutDTO signOutDTO, String token){
-        url = url+"api/teller/signout";
+        url = url+"/api/teller/signout";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();
@@ -181,7 +181,7 @@ public class TellerOperationsRepository {
     }
 
     public ResponseDTO signInUser(SigninDTO signinDTO, String token){
-        url = url+"api/teller/signin";
+        url = url+"/api/teller/signin";
 
         //Set Normal headers
         RestTemplate restTemplate = new RestTemplate();

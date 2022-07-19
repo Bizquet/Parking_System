@@ -9,6 +9,6 @@
             fx:controller="com.project.parking_system.controllers.teller.QRnParkedController">
    <children>
       <Label layoutX="368.0" layoutY="177.0" text="Parking Slot" />
-      <Button fx:id="openParkingMap" layoutX="359.0" layoutY="258.0" mnemonicParsing="false" text="Parking Map" />
+      <Button  layoutX="359.0" layoutY="258.0" mnemonicParsing="false" text="Parking Map" onAction="#openParkingMap"/>
    </children>
 </AnchorPane>

@@ -1,17 +1,24 @@
 package com.project.parking_system.controllers.teller;
 
+import com.project.parking_system.Main;
 import com.project.parking_system.Repositories.TellerOperationsRepository;
 import com.project.parking_system.controllers.LoginController;
+import com.project.parking_system.controllers.View;
 import com.project.parking_system.datamodel.SigninDTO;
 import com.project.parking_system.datamodel.UserDTO;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -72,7 +79,7 @@ public class OldCustomerParkingMap implements Initializable {
     }
 
     @FXML
-    public void getSelectedSlot(javafx.event.ActionEvent event){
+    public void getSelectedSlot(javafx.event.ActionEvent event) throws IOException {
 
         String source = ((Button) event.getSource()).getText();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -95,7 +102,7 @@ public class OldCustomerParkingMap implements Initializable {
         }
     }
 
-    private void signInUser(String parkingSlot){
+    private void signInUser(String parkingSlot) throws IOException {
         TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
         Timestamp ts = Timestamp.from(Instant.now());
 
