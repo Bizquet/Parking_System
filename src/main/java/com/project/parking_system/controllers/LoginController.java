@@ -65,7 +65,6 @@ public class LoginController {
         }
     }
 
-
     /**
      * Switches to the teller part of the app (might need to pass in account object or just api calls to store stuff)
      */

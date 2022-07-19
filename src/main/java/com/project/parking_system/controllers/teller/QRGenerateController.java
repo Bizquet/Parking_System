@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -17,6 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
@@ -54,7 +57,11 @@ public class QRGenerateController implements Initializable {
             stage.showAndWait();
 
         }else{
-            // alerts and clear fields
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Invalid Inputs");
+            alert.setContentText("Please input correct text in fields");
+            alert.showAndWait();
+
         }
 
     }
@@ -73,8 +80,7 @@ public class QRGenerateController implements Initializable {
     // create functions to check if there are errors in textfield.
 
     private boolean txtFieldHasErrors(){
-
-        return false;
+        return (txtContactField.getText().trim().isEmpty() || txtPlateField.getText().trim().isEmpty());
     }
 
 }

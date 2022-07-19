@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Added Alert to logins">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Deleted changeToAnalytics function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRScanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "last_opened_file_path": "F:/Documents/lib/javafx-sdk-11.0.2/bin",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Documents/lib/javafx-sdk-11.0.2/bin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.parking_system.Main" />
@@ -252,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658243404775</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Deleted changeToAnalytics function">
+      <created>1658264656185</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658264656185</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -292,7 +297,8 @@
     <MESSAGE value="added bg image" />
     <MESSAGE value="Adjusted button layout, removed analytics button" />
     <MESSAGE value="Added Alert to logins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Alert to logins" />
+    <MESSAGE value="Deleted changeToAnalytics function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted changeToAnalytics function" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
