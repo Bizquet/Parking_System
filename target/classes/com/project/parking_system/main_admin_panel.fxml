@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.admin.MainAdminController">
+<BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.parking_system.controllers.admin.MainAdminController">
    <bottom>
       <AnchorPane id="DarkPanel" prefHeight="115.0" prefWidth="960.0" BorderPane.alignment="CENTER">
          <children>
