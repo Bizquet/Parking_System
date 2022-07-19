@@ -10,13 +10,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mainTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.MainTellerController">
+<BorderPane fx:id="mainTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.teller.MainTellerController">
    <left>
       <Pane prefHeight="540.0" prefWidth="160.0" style="-fx-background-color: steelblue;" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutY="65.0" prefHeight="220.0" prefWidth="160.0" spacing="8.0">
+            <VBox layoutY="128.0" prefHeight="157.0" prefWidth="160.0" spacing="8.0">
                <children>
                   <Button id="RedButton" mnemonicParsing="false" onAction="#toParkingMap" prefHeight="25.0" prefWidth="170.0" text="Parking Map">
                      <VBox.margin>
@@ -32,7 +30,7 @@
                </padding>
             </VBox>
             <Button id="WhiteButton" layoutX="53.0" layoutY="454.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
-            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="107.0" fitWidth="103.0" layoutX="29.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@parking-svgrepo-com.png" />
                </image>
