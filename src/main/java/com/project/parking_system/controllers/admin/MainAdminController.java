@@ -187,16 +187,6 @@ public class MainAdminController {
     }
 
     @FXML
-    public void changeToAnalytics() throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.ANALYTICS.getFilename()));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) mainAdminPane.getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
-    @FXML
     public void logout() throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.LOGIN.getFilename()));
         Parent root = loader.load();

@@ -53,7 +53,6 @@ public class QRScanController implements Initializable {
         this.contentArea = pane;
     }
 
-    // not sure if need to pass in actionEvent parameter
     private void switchToNParked(UserDTO currentCustomer) throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.QR_SCAN_NPARKED.getFilename()));
         Parent root = loader.load();
@@ -64,9 +63,6 @@ public class QRScanController implements Initializable {
         Stage stage = (Stage) qrMainPane.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
-
-//        contentArea.getChildren().removeAll();
-//        contentArea.getChildren().setAll(root);
 
     }
 
@@ -83,19 +79,7 @@ public class QRScanController implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
 
-//        contentArea.getChildren().removeAll();
-//        contentArea.getChildren().setAll(root);
-
     }
-
-//    private void backToMainTeller() throws IOException {
-//        FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.TELLER_TAB.getFilename()));
-//        Parent root = loader.load();
-//
-//        Stage stage = (Stage) qrMainPane.getScene().getWindow();
-//        stage.setScene(new Scene(root));
-//        stage.show();
-//    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -184,8 +168,6 @@ public class QRScanController implements Initializable {
 
         if(result != null){
 
-            System.out.println("Read String: " + result.toString());
-
             ObjectMapper mapper = new ObjectMapper();
             UserDTO qrInfo = mapper.readValue(result.toString(), UserDTO.class);
             stopCamera();
@@ -194,10 +176,8 @@ public class QRScanController implements Initializable {
 
             if(currentCustomer.getParking_slot() == null || Objects.equals(currentCustomer.getParking_slot(), "")){
                 switchToNParked(currentCustomer);
-//                backToMainTeller();
             } else{
                 switchToParked(currentCustomer);
-//                backToMainTeller();
             }
 
         }
