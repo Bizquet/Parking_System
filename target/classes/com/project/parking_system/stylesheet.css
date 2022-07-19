@@ -1,0 +1,65 @@
+.root{
+    -fx-background-color: powderblue;
+}
+
+.label{
+    -fx-text-fill: midnightblue;
+}
+
+.text-field{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: ivory;
+}
+
+.button:disabled{
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+}
+
+#BGHolder{
+    -fx-background-image: url("bg-image.jpg");
+}
+
+#DarkPanel{
+    -fx-background-color: steelblue;
+}
+
+#BoldText{
+    -fx-font-weight: bold;
+}
+
+#RedButton{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+}
+
+#RedButton:hover{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: ivory;
+    -fx-text-fill: crimson;
+}
+
+#BlueButton{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: powderblue;
+    -fx-text-fill: midnightblue;
+}
+
+#WhiteButton{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: ivory;
+    -fx-text-fill: crimson;
+}
+
+#WhiteButton:hover{
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: powderblue;
+    -fx-text-fill: midnightblue;
+}
