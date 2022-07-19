@@ -6,53 +6,24 @@ import com.project.parking_system.datamodel.UserDTO;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class ParkingController {
-
-//    @FXML
-//    private Button btnA1;
-//    @FXML
-//    private Button btnA2;
-//    @FXML
-//    private Button btnA3;
-//    @FXML
-//    private Button btnA4;
-//    @FXML
-//    private Button btnB1;
-//    @FXML
-//    private Button btnB2;
-//    @FXML
-//    private Button btnB3;
-//    @FXML
-//    private Button btnB4;
-//    @FXML
-//    private Button btnC1;
-//    @FXML
-//    private Button btnC2;
-//    @FXML
-//    private Button btnC3;
-//    @FXML
-//    private Button btnC4;
-//    @FXML
-//    private Button btnD1;
-//    @FXML
-//    private Button btnD2;
-//    @FXML
-//    private Button btnD3;
-//    @FXML
-//    private Button btnD4;
-
+public class ParkingController implements Initializable {
     @FXML
     private AnchorPane parkingMapPane;
 
-    public void initialize(){
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeButtons();
     }
 
@@ -61,7 +32,12 @@ public class ParkingController {
     public void showFreeAlert(ActionEvent e){
         // can be used in getting source of button to put into dialog
         String source = ((Button)e.getSource()).getText();
-        System.out.println("Button pressed is: " + source);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Parking Slot Status");
+        alert.setHeaderText(null);
+        alert.setContentText("Slot: " + source + " is currently free");
+        alert.showAndWait();
+
     }
 
     // Get all occupied slots and disables respective button (should color on parking controller
@@ -82,8 +58,7 @@ public class ParkingController {
 
         ArrayList<String> takenSlotList = new ArrayList<>(); // make custom list with not null stuff to test
 
-
-        // Getting all taken slots and put into ArrayList
+//         Getting all taken slots and put into ArrayList
         if(!(userList == null)){
 
             for(UserDTO userDTO: userList){
@@ -111,10 +86,10 @@ public class ParkingController {
         }
     }
 
+
 }
 
 // create task to get all parked users
-
 class GetAllSlots extends Task{
     protected final TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
     protected String token;

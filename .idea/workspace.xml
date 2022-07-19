@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Added functions to determine taken slots and disable respective buttons">
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Fixed class names to avoid confusion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MapDialogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/QRGenerateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/datamodel/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/qr_generate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MapDialogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRGenerateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRGenerateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map.fxml" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658197843431</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed class names to avoid confusion">
+      <created>1658198036518</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658198036518</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -216,7 +234,8 @@
     <MESSAGE value="Made LoginResource.token null when logging out" />
     <MESSAGE value="Removed loginResource and moved global static variable to LoginController" />
     <MESSAGE value="Added functions to determine taken slots and disable respective buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functions to determine taken slots and disable respective buttons" />
+    <MESSAGE value="Fixed class names to avoid confusion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed class names to avoid confusion" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

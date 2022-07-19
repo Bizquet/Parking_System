@@ -11,6 +11,7 @@ module com.project.parking_system {
     requires com.google.gson;
     requires javafx.swing;
     requires java.desktop;
+    requires java.sql;
 
     opens com.project.parking_system to javafx.fxml;
     exports com.project.parking_system;
