@@ -3,7 +3,6 @@ package com.project.parking_system.controllers.teller;
 import com.project.parking_system.Repositories.TellerOperationsRepository;
 import com.project.parking_system.controllers.LoginController;
 import com.project.parking_system.datamodel.UserDTO;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,42 +40,27 @@ public class ParkingController implements Initializable {
     }
 
     // Get all occupied slots and disables respective button (should color on parking controller
-    private void initializeButtons(){
+    private void initializeButtons() {
         ArrayList<String> buttonStringList = new ArrayList<>();
         ArrayList<Button> buttonList = new ArrayList<>();
-
-        for(Node node: parkingMapPane.getChildren()){
+        for (Node node : parkingMapPane.getChildren()) {
             Button currentButton = (Button) node;
             String buttonText = currentButton.getText();
             buttonList.add(currentButton);
             buttonStringList.add(buttonText);
         }
 
-        Task<ArrayList<UserDTO>> task = new GetAllSlots(LoginController.tokenString);
-        ArrayList<UserDTO> userList = task.getValue();
-        new Thread(task).start();
-
+        ArrayList<UserDTO> userList = getAllParkedUsers();
         ArrayList<String> takenSlotList = new ArrayList<>(); // make custom list with not null stuff to test
 
-//         Getting all taken slots and put into ArrayList
-        if(!(userList == null)){
+        for (UserDTO userDTO : userList) {
 
-            for(UserDTO userDTO: userList){
-                if(userDTO.getParking_slot() != null){
-                    takenSlotList.add(userDTO.getParking_slot());
-                }
-            }
-            // uncomment to test taken slots
-//            takenSlotList.add("A1");
-//            takenSlotList.add("B1");
-//            takenSlotList.add("A2");
-//            takenSlotList.add("A4");
-
-            for(String slot: buttonStringList){
-                if(takenSlotList.contains(slot)){
-                    for(Button button: buttonList){
+            takenSlotList.add(userDTO.getParking_slot());
+            for (String slot : buttonStringList) {
+                if (takenSlotList.contains(slot)) {
+                    for (Button button : buttonList) {
                         // setButtonDisable
-                        if(Objects.equals(button.getText(), slot)){
+                        if (Objects.equals(button.getText(), slot)) {
                             button.setDisable(true);
                         }
                     }
@@ -84,25 +68,34 @@ public class ParkingController implements Initializable {
             }
 
         }
+
     }
 
+    private ArrayList<UserDTO> getAllParkedUsers(){
+        TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
+        List<UserDTO> userDTOList = new ArrayList<>((List<UserDTO>) tellerOperation
+                .getAllParkedUsers(LoginController.tokenString).getPayload());
+
+        return new ArrayList<>(userDTOList);
+
+    }
 
 }
 
 // create task to get all parked users
-class GetAllSlots extends Task{
-    protected final TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
-    protected String token;
-
-    GetAllSlots(String token){
-        this.token = token;
-    }
-
-    @Override
-    protected ArrayList<UserDTO> call() throws Exception {
-        List<UserDTO> userDTOList = new ArrayList<>((List<UserDTO>) tellerOperation
-                .getAllParkedUsers(token).getPayload());
-
-        return new ArrayList<>(userDTOList);
-    }
-}
+//class GetAllSlots extends Task{
+//    protected final TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
+//    protected String token;
+//
+//    GetAllSlots(String token){
+//        this.token = token;
+//    }
+//
+//    @Override
+//    protected ArrayList<UserDTO> call() throws Exception {
+//        List<UserDTO> userDTOList = new ArrayList<>((List<UserDTO>) tellerOperation
+//                .getAllParkedUsers(token).getPayload());
+//
+//        return new ArrayList<>(userDTOList);
+//    }
+//}

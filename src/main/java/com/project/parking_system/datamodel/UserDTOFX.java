@@ -6,10 +6,10 @@ import javafx.beans.property.SimpleStringProperty;
 public class UserDTOFX {
 
     private SimpleStringProperty parking_slot = new SimpleStringProperty("");
-    private SimpleDoubleProperty contactNum = new SimpleDoubleProperty();
+    private SimpleStringProperty contactNum = new SimpleStringProperty("");
     private SimpleStringProperty plateNum = new SimpleStringProperty("");
 
-    public UserDTOFX(String parking_slot, double contactNum, String plateNum) {
+    public UserDTOFX(String parking_slot, String contactNum, String plateNum) {
         this.parking_slot.set(parking_slot);
         this.contactNum.set(contactNum);
         this.plateNum.set(plateNum);
@@ -30,15 +30,15 @@ public class UserDTOFX {
         this.parking_slot.set(parking_slot);
     }
 
-    public double getContactNum() {
+    public String getContactNum() {
         return contactNum.get();
     }
 
-    public SimpleDoubleProperty contactNumProperty() {
+    public SimpleStringProperty contactNumProperty() {
         return contactNum;
     }
 
-    public void setContactNum(double contactNum) {
+    public void setContactNum(String contactNum) {
         this.contactNum.set(contactNum);
     }
 

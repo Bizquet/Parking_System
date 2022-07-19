@@ -4,12 +4,19 @@ public class UserDTO {
 
     private String parking_slot;
     private String timeStamp;
-    private double contactNum;
+    private String contactNum;
     private String plateNum;
     private String uid;
 
-    public UserDTO(String parking_slot, String timeStamp, double contactNum, String plateNum, String uid) {
+    public UserDTO(String parking_slot, String timeStamp, String contactNum, String plateNum, String uid) {
         this.parking_slot = parking_slot;
+        this.timeStamp = timeStamp;
+        this.contactNum = contactNum;
+        this.plateNum = plateNum;
+        this.uid = uid;
+    }
+
+    public UserDTO(String timeStamp, String contactNum, String plateNum, String uid) {
         this.timeStamp = timeStamp;
         this.contactNum = contactNum;
         this.plateNum = plateNum;
@@ -35,11 +42,11 @@ public class UserDTO {
         this.timeStamp = timeStamp;
     }
 
-    public double getContactNum() {
+    public String getContactNum() {
         return contactNum;
     }
 
-    public void setContactNum(double contactNum) {
+    public void setContactNum(String contactNum) {
         this.contactNum = contactNum;
     }
 

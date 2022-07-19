@@ -3,7 +3,6 @@ package com.project.parking_system.controllers.teller;
 import com.project.parking_system.Main;
 import com.project.parking_system.controllers.LoginController;
 import com.project.parking_system.controllers.View;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -73,7 +72,7 @@ public class MainTellerController implements Initializable {
     }
 
     @FXML
-    public void toScanQR(ActionEvent event) throws IOException {
+    public void toScanQR() throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.QR_SCAN.getFilename()));
         Parent root = loader.load();
 

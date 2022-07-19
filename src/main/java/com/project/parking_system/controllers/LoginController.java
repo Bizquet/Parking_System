@@ -41,10 +41,10 @@ public class LoginController {
             tokenString = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){
                 case "ADMIN_USER":
-                    switchToAdmin(currentLogin);
+                    switchToAdmin();
                     break;
                 case "TELLER_USER":
-                    switchToTeller(currentLogin);
+                    switchToTeller();
                     break;
                 default:
                     currentLogin = null;
@@ -56,7 +56,7 @@ public class LoginController {
     /**
      * Switches to the teller part of the app (might need to pass in account object or just api calls to store stuff)
      */
-    private void switchToTeller(LoginDTO currentLogin) throws IOException {
+    private void switchToTeller() throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.TELLER_TAB.getFilename()));
         Parent root = loader.load();
 
@@ -68,7 +68,7 @@ public class LoginController {
     /**
      * Switches to the admin part of the app (might need to pass in account object or just api calls to store stuff)
      */
-    private void switchToAdmin(LoginDTO currentLogin) throws IOException {
+    private void switchToAdmin() throws IOException {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.ADMIN_TAB.getFilename()));
         Parent root = loader.load();
 

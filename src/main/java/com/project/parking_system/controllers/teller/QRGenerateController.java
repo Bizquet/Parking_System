@@ -2,7 +2,7 @@ package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.Main;
 import com.project.parking_system.controllers.View;
-import com.project.parking_system.datamodel.LoginDTO;
+import com.project.parking_system.datamodel.UserDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,15 +15,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class QRGenerateController implements Initializable {
-
-    private LoginDTO currentLogin;
-
-    public void initData(LoginDTO currentLogin){
-        this.currentLogin = currentLogin;
-    }
 
     // Refresh Page after successful generation of QR
     @FXML
@@ -37,29 +34,47 @@ public class QRGenerateController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        txtContactField.setText("Testing 1");
-        txtPlateField.setText("Testing 2");
+
     }
 
     @FXML
-    public void showMap() throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.MAP_DIALOG.getFilename()));
-        Parent root = loader.load();
+    public void openParkingMap() throws IOException {
 
-        Stage stage = new Stage();
-        stage.initOwner(qrPane.getScene().getWindow());
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Parking Map");
-        stage.setScene(new Scene(root));
-        MapDialogController dialogController = loader.getController();
-        dialogController.initData(stage);
-        stage.showAndWait();
+        if(!txtFieldHasErrors()){
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(View.MAP_DIALOG.getFilename()));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.initOwner(qrPane.getScene().getWindow());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Parking Map");
+            stage.setScene(new Scene(root));
+            MapDialogController dialogController = loader.getController();
+            dialogController.initData(packInfo());
+            stage.showAndWait();
+
+        }else{
+            // alerts and clear fields
+        }
 
     }
 
-    public void generateQr(){
+    private UserDTO packInfo(){
+
+        String contactNum = txtContactField.getText();
+        String plateNum = txtPlateField.getText();
+        Timestamp ts = Timestamp.from(Instant.now());
+        UUID uid = UUID.randomUUID();
+
+        return new UserDTO(ts.toString(), contactNum, plateNum, uid.toString());
 
     }
 
+    // create functions to check if there are errors in textfield.
+
+    private boolean txtFieldHasErrors(){
+
+        return false;
+    }
 
 }

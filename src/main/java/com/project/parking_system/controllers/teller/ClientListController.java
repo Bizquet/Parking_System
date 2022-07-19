@@ -47,7 +47,7 @@ class GetAllUsersTask extends Task {
 
         for(UserDTO user: userDTOList){
             UserDTOFX userDTOFX = new UserDTOFX();
-            userDTOFX.setContactNum(user.getContactNum());
+            userDTOFX.setContactNum(String.valueOf(user.getContactNum()));
             userDTOFX.setParking_slot(user.getParking_slot());
             userDTOFX.setPlateNum(user.getPlateNum());
 

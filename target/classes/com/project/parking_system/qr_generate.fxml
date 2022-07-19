@@ -9,7 +9,7 @@
             fx:controller="com.project.parking_system.controllers.teller.QRGenerateController" stylesheets="@stylesheet.css">
 
    <children>
-      <Button layoutX="357.0" layoutY="378.0" mnemonicParsing="false" onAction="#showMap" text="Open Map.. " />
+      <Button layoutX="357.0" layoutY="378.0" mnemonicParsing="false" onAction="#openParkingMap" text="Open Map.. " />
       <Label layoutX="323.0" layoutY="138.0" text="Contact Number" />
       <Label layoutX="323.0" layoutY="233.0" text="Plate Number" />
       <Label layoutX="323.0" layoutY="333.0" text="Parking Spot" />
