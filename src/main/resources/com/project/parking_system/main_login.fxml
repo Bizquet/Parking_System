@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.parking_system.controllers.LoginController">
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-image: bg-image.jpg;" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.LoginController">
    <children>
       <Pane prefHeight="540.0" prefWidth="169.0" style="-fx-background-color: steelblue;" />
       <Label id="BoldText" layoutX="406.0" layoutY="190.0" text="Parking Management System Login" />

@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Fixed naming conventions in TellerOperationsRepository.java">
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Adjusted button layout, removed analytics button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/Repositories/AuthenticationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_admin_panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/main_teller_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/parking_map_dialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/qr_scan_parked.fxml" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +204,35 @@
       <option name="project" value="LOCAL" />
       <updated>1658215685824</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Design change (added background, removed xmlns=&quot;http://javafx.com/javafx/18&quot;)">
+      <created>1658238936828</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658238936828</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Login DTO fixed (by archie)">
+      <created>1658238963187</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1658238963187</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added bg image">
+      <created>1658239243375</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1658239243375</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adjusted button layout, removed analytics button">
+      <created>1658239883469</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1658239883469</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -247,7 +268,11 @@
     <MESSAGE value="Fixed class names to avoid confusion" />
     <MESSAGE value="Added alert in default parking map" />
     <MESSAGE value="Fixed naming conventions in TellerOperationsRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed naming conventions in TellerOperationsRepository.java" />
+    <MESSAGE value="Design change (added background, removed xmlns=&quot;http://javafx.com/javafx/18&quot;)" />
+    <MESSAGE value="Login DTO fixed (by archie)" />
+    <MESSAGE value="added bg image" />
+    <MESSAGE value="Adjusted button layout, removed analytics button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted button layout, removed analytics button" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.parking_system.controllers.admin.MainAdminController">
+<BorderPane fx:id="mainAdminPane" prefHeight="540.0" prefWidth="960.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.admin.MainAdminController">
    <bottom>
       <AnchorPane id="DarkPanel" prefHeight="115.0" prefWidth="960.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="RedButton" layoutX="109.0" layoutY="35.0" mnemonicParsing="false" onAction="#showAddAccountDialog" text="Add Account" />
-            <Button id="RedButton" layoutX="285.0" layoutY="35.0" mnemonicParsing="false" onAction="#showDeleteAccountDialog" text="Delete Account" />
-            <Button id="RedButton" layoutX="554.0" layoutY="35.0" mnemonicParsing="false" onAction="#showChangePasswordDialog" text="Change Password" />
-            <Button id="BlueButton" layoutX="453.0" layoutY="76.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            <Button id="RedButton" layoutX="245.0" layoutY="33.0" mnemonicParsing="false" onAction="#showAddAccountDialog" prefHeight="50.0" prefWidth="150.0" text="Add Account" />
+            <Button id="RedButton" layoutX="405.0" layoutY="33.0" mnemonicParsing="false" onAction="#showDeleteAccountDialog" prefHeight="50.0" prefWidth="150.0" text="Delete Account" />
+            <Button id="RedButton" layoutX="565.0" layoutY="33.0" mnemonicParsing="false" onAction="#showChangePasswordDialog" prefHeight="50.0" prefWidth="150.0" text="Change Password" />
+            <Button id="BlueButton" layoutX="735.0" layoutY="33.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="100.0" text="Logout" />
          </children>
       </AnchorPane>
    </bottom>
