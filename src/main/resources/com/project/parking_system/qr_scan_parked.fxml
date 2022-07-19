@@ -6,15 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.QRParkedController"
-            stylesheets="@stylesheet.css">
+<AnchorPane prefHeight="540.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.project.parking_system.controllers.teller.QRParkedController">
 
-   <Label layoutX="99.0" layoutY="77.0" text="Customer Details"/>
-   <Button fx:id="checkout" layoutX="367.0" layoutY="357.0" mnemonicParsing="false" text="Checkout"
-           onAction="#checkout"/>
+   <Label layoutX="99.0" layoutY="77.0" text="Customer Details" />
+   <Button fx:id="checkout" layoutX="367.0" layoutY="357.0" mnemonicParsing="false" onAction="#checkout" text="Checkout" />
    <Pane layoutX="99.0" layoutY="106.0" prefHeight="200.0" prefWidth="583.0" style="-fx-background-color: #F1FAEE;">
-      <TextArea fx:id="txtDetails" blendMode="COLOR_BURN" prefHeight="200.0" prefWidth="583.0"
-                style="-fx-background-color: #F1FAEE;"/>
+      <TextArea fx:id="txtDetails" prefHeight="200.0" prefWidth="583.0" style="-fx-background-color: #F1FAEE;" />
    </Pane>
 </AnchorPane>
