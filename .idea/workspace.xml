@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Made LoginResource.token null when logging out">
+    <list default="true" id="a719f314-c553-4879-bc3d-f238ee38fa92" name="Changes" comment="Removed loginResource and moved global static variable to LoginController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/LoginResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/admin/MainAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/admin/MainAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ClientListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/MainTellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/parking_system/controllers/teller/ParkingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/parking_map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/project/parking_system/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/MainAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/admin/MainAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ClientListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ClientListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/MainTellerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/ParkingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRParkedController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRScanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/parking_system/controllers/teller/QRnParkedController.class" afterDir="false" />
     </list>
     <list id="98340364-4ee5-4714-ad15-744446b903f5" name="updated gitignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658185570321</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Removed loginResource and moved global static variable to LoginController">
+      <created>1658188416307</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658188416307</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Removed loginResource and moved global static variable to LoginController">
+      <created>1658188578998</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658188578998</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -198,7 +220,8 @@
     <MESSAGE value="Removed changeScene function in QRScan Controller and&#10;Added initData for QR Parked and QRnParked" />
     <MESSAGE value="Added function to populate clientList table" />
     <MESSAGE value="Made LoginResource.token null when logging out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made LoginResource.token null when logging out" />
+    <MESSAGE value="Removed loginResource and moved global static variable to LoginController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed loginResource and moved global static variable to LoginController" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Parking_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1658066000376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

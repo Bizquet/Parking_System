@@ -3,12 +3,41 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="parkingMapPane" prefHeight="540.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.project.parking_system.controllers.teller.ParkingController" stylesheets="@stylesheet.css">
+<AnchorPane fx:id="parkingMapPane" prefHeight="540.0" prefWidth="800.0" stylesheets="@stylesheet.css"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parking_system.controllers.teller.ParkingController">
    <children>
-      <Button fx:id="btn1" layoutX="224.0" layoutY="258.0" mnemonicParsing="false" onAction="#showParkingDialog"
-              text="Button 1" />
-      <Button fx:id="btn2" layoutX="487.0" layoutY="258.0" mnemonicParsing="false" onAction="#showParkingDialog"
-              text="Button 2" />
+      <Button fx:id="btnA1" layoutX="129.0" layoutY="132.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="A1" />
+      <Button fx:id="btnB3" layoutX="289.0" layoutY="276.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="B3" />
+      <Button fx:id="btnC1" layoutX="449.0" layoutY="132.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="C1" />
+      <Button fx:id="btnA3" layoutX="129.0" layoutY="276.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="A3" />
+      <Button fx:id="btnB2" layoutX="289.0" layoutY="194.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="B2" />
+      <Button fx:id="btnA2" layoutX="129.0" layoutY="194.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="A2" />
+      <Button fx:id="btnB4" layoutX="289.0" layoutY="351.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="B4" />
+      <Button fx:id="btnD1" layoutX="609.0" layoutY="129.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="D1" />
+      <Button fx:id="btnD3" layoutX="609.0" layoutY="276.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="D3" />
+      <Button fx:id="btnD4" layoutX="609.0" layoutY="351.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="D4" />
+      <Button fx:id="btnC2" layoutX="449.0" layoutY="194.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="C2" />
+      <Button fx:id="btnC4" layoutX="452.0" layoutY="351.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="C4" />
+      <Button fx:id="btnD2" layoutX="609.0" layoutY="194.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="D2" />
+      <Button fx:id="btnC3" layoutX="452.0" layoutY="276.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="C3" />
+      <Button fx:id="btnB1" layoutX="289.0" layoutY="132.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="B1" />
+      <Button fx:id="btnA4" layoutX="129.0" layoutY="351.0" mnemonicParsing="false" onAction="#showFreeAlert"
+              prefWidth="62.0" text="A4" />
    </children>
 </AnchorPane>

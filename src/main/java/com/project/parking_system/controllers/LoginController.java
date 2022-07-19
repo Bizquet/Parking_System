@@ -37,7 +37,6 @@ public class LoginController {
         if(currentLogin == null){
             // Add alert dialog
             System.out.println("Wrong credentials");
-            ;
         }else {
             tokenString = currentLogin.getLogin_token();
             switch (currentLogin.getRole()){

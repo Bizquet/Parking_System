@@ -1,6 +1,7 @@
 package com.project.parking_system.controllers.teller;
 
 import com.project.parking_system.Repositories.AdminOperationRepository;
+import com.project.parking_system.Repositories.TellerOperationsRepository;
 import com.project.parking_system.controllers.LoginController;
 import com.project.parking_system.datamodel.UserDTO;
 import com.project.parking_system.datamodel.UserDTOFX;
@@ -30,7 +31,7 @@ public class ClientListController implements Initializable {
 }
 
 class GetAllUsersTask extends Task {
-    protected final AdminOperationRepository adminOperation = new AdminOperationRepository();
+    protected final TellerOperationsRepository tellerOperation = new TellerOperationsRepository();
     protected String token;
 
     GetAllUsersTask(String token){
@@ -39,8 +40,8 @@ class GetAllUsersTask extends Task {
 
     @Override
     protected ObservableList<UserDTOFX> call() throws Exception {
-        List<UserDTO> userDTOList = new ArrayList<>((List<UserDTO>) adminOperation
-                .getAllEmployees(token).getPayload());
+        List<UserDTO> userDTOList = new ArrayList<>((List<UserDTO>) tellerOperation
+                .getAllParkedUsers(token).getPayload());
 
         List<UserDTOFX> userDTOFXList = new ArrayList<>();
 

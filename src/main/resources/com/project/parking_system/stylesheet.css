@@ -12,6 +12,11 @@
     -fx-background-color: ivory;
 }
 
+.button:disabled{
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+}
+
 #DarkPanel{
     -fx-background-color: steelblue;
 }
