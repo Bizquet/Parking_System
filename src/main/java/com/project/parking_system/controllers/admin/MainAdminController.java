@@ -25,6 +25,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 public class MainAdminController {
@@ -219,10 +220,13 @@ class GetAllEmployeesTask extends Task{
 
         for(EmployeeDTO employee: employeeDTOList){
             EmployeeDTOFX employeeDTOFX = new EmployeeDTOFX();
-            employeeDTOFX.setId(employee.getId());
-            employeeDTOFX.setRole(employee.getRole());
-            employeeDTOFX.setUsername(employee.getUsername());
-            employeeDTOFXList.add(employeeDTOFX);
+            if(Objects.equals(employee.getRole(), "TELLER_USER")) {
+                employeeDTOFX.setId(employee.getId());
+                employeeDTOFX.setRole(employee.getRole());
+                employeeDTOFX.setUsername(employee.getUsername());
+                employeeDTOFXList.add(employeeDTOFX);
+            }
+
         }
 
         return FXCollections.observableArrayList(employeeDTOFXList);
