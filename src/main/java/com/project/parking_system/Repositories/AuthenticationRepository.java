@@ -17,7 +17,8 @@ public class AuthenticationRepository {
 
     private String url="http://springrestserver-env.eba-gywympmc.ap-northeast-1.elasticbeanstalk.com";
 
-    public LoginDTO login(String username,String password){
+    public static LoginDTO login(String username,String password){
+        String url="http://springrestserver-env.eba-gywympmc.ap-northeast-1.elasticbeanstalk.com/";
         url=url+"/login";
 
         //Create Headers
@@ -35,19 +36,22 @@ public class AuthenticationRepository {
         String json = gson.toJson(map);
 
         HttpEntity<String> entity = new HttpEntity<>(json,httpHeaders);
+        try{
+            LoginDTO loginDTO = new LoginDTO();
+            //Create a POST Method
+            ResponseEntity<String> responseEntity = restTemplate.postForEntity(url,entity,String.class);
 
-        //Create a POST Method
-        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url,entity,String.class);
-
-        LoginDTO loginDTO = new LoginDTO();
-        if(responseEntity.getStatusCode() == HttpStatus.OK){
             loginDTO.setLogin_token(responseEntity.getHeaders().getFirst("Authorization"));
             loginDTO.setRole(responseEntity.getHeaders().getFirst("Expect"));
-        }else{
-            loginDTO.setRole(null);
-            loginDTO.setLogin_token(null);
+            return loginDTO;
+        }catch(HttpClientErrorException ex){
+            if(ex.getStatusCode()==HttpStatus.UNAUTHORIZED){
+                return null;
+            }else{
+                System.out.println(ex.getMessage());
+                return null;
+            }
         }
-        return loginDTO;
     }
 
     public ResponseDTO RegisterEmployee(EmployeeRegistrationDTO registrationDTO, String token){
