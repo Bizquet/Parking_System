@@ -18,10 +18,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.List;
 
 public class MapDialogController implements Initializable {
 
@@ -74,6 +77,16 @@ public class MapDialogController implements Initializable {
 
         BitMatrix matrix = new MultiFormatWriter().encode(jsonString, BarcodeFormat.QR_CODE, 500, 500);
         MatrixToImageWriter.writeToPath(matrix, "jpg", Paths.get(PATH));
+
+        // Open explorer
+        Desktop desktop = Desktop.getDesktop();
+        File dirToOpen = null;
+        try{
+            dirToOpen = new File(String.valueOf(Paths.get(PATH)));
+            desktop.open(dirToOpen);
+        } catch (IllegalArgumentException iae){
+            System.out.println("File not found!");
+        }
 
         sendToRESTNewUser(currentUser);
     }
