@@ -13,7 +13,6 @@ public enum View {
     QR_SCAN_PARKED("qr_scan_parked.fxml"),
     ADD_ACCOUNT("add_account_dialog.fxml"),
     CHANGE_PASSWORD("change_password_dialog.fxml"),
-    ANALYTICS("analytics.fxml"),
     PARKED_MAP("parking_map_old_cust.fxml"),
     QR_SCAN("qr_scan.fxml");
 
